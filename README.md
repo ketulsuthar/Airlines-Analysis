@@ -31,7 +31,8 @@ Latitude : Decimal degrees, usually to six significant digits. Negative is South
 Longitude : Decimal degrees, usually to six significant digits. Negative is West, positive is East. <br/>
 Altitude : In feet. <br/>
 Timezone : Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5. <br/>
-DST : Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (NewZealand), N (None) or U (Unknown). See also: Help: Time <br/>
+DST : Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (NewZealand), N (None) or U (Unknown). <br/>
+See also: Help: Time <br/>
 Tz database time Timezone in "tz" (Olson) format, eg. "America/Los_Angeles". zone <br/>
 
 #### Air Lines Data set:
