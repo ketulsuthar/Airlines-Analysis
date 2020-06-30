@@ -47,3 +47,5 @@ select distinct(a.airline_name) from routes r join airlines a on r.airline_id = 
 -- List of Airlines operating with code share
 select distinct(a.airline_name) from routes r join airlines a on r.airline_id = a.airline_id where upper(r.codeshare) = 'Y';
 
+-- Which country (or) territory having highest Airports
+select country as Country, count(airport_id) as Count from airports_mod group by country order by Count desc;
