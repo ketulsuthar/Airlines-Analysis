@@ -12,3 +12,9 @@ fields terminated by ','
 stored as textfile
 location '/user/edureka_85838/airports_mod';
 
+-- Create airlines table
+create external table airlines (airline_id bigint, airline_name string,alias string, iata_code char(2),icao_code char(3), callsign string, country string, active char(1))
+row format delimited
+fields terminated by ','
+stored as textfile
+location '/user/edureka_85838/airlines';
