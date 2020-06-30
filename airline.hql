@@ -38,6 +38,8 @@ set hive.exec.dynamic.partition=true;
 -- load table airports_by_country
 INSERT OVERWRITE TABLE airports_by_country PARTITION(country) select mod.airport_id, mod.airport_name, mod.city ,mod.iata_code, mod.icao_code, mod.latitude, mod.longitude, mod.altitude, mod.timezone, mod.dst, mod.tz, mod.country from airports_mod mod DISTRIBUTE By country;
 
+-- Find list of Airports operating in the Country India
+select airport_name from airports_by_country where lower(country) = 'india';
 
 --
 
