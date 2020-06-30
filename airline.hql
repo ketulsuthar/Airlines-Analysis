@@ -44,4 +44,6 @@ select airport_name from airports_by_country where lower(country) = 'india';
 -- Find the list of Airlines having zero stops
 select distinct(a.airline_name) from routes r join airlines a on r.airline_id = a.airline_id where r.stops = 0;
 
+-- List of Airlines operating with code share
+select distinct(a.airline_name) from routes r join airlines a on r.airline_id = a.airline_id where upper(r.codeshare) = 'Y';
 
