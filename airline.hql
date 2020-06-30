@@ -29,3 +29,6 @@ load data inpath 'airports_mod.dat' overwrite into table airports_mod;
 -- load table airlines
 load data inpath 'Final_airlines' overwrite into table airlines;
 
+-- load table routes
+load data inpath 'routes.dat' overwrite into table routes;
+
