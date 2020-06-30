@@ -18,3 +18,10 @@ row format delimited
 fields terminated by ','
 stored as textfile
 location '/user/edureka_85838/airlines';
+
+-- Create routes table
+create external table routes(airline_code char(3), airline_id bigint, source_airport char(4),source_airport_id bigint, dest_airport char(4), dest_airport_id bigint,codeshare char(1), stops int, equipment char(3))
+row format delimited
+fields terminated by ','
+stored as textfile
+location '/user/edureka_85838/routes';
