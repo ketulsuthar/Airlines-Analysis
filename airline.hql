@@ -62,3 +62,4 @@ INSERT OVERWRITE TABLE airlines_by_country PARTITION(country) select airline_id,
 
 -- Find the list of Active Airlines in United state
 select distinct(airline_name) from airlines_by_country where lower(country) = lower('United States') and upper(active) = 'Y';
+
