@@ -22,3 +22,6 @@ create table routes(airline_code char(3), airline_id bigint, source_airport char
 row format delimited
 fields terminated by ','
 stored as textfile;
+
+-- load table  airports_mod
+load data inpath 'airports_mod.dat' overwrite into table airports_mod;
