@@ -49,3 +49,16 @@ select distinct(a.airline_name) from routes r join airlines a on r.airline_id = 
 
 -- Which country (or) territory having highest Airports
 select country as Country, count(airport_id) as Count from airports_mod group by country order by Count desc;
+
+-- Create airlines_by_country partition by country
+create table airlines_by_country (airline_id bigint, airline_name string, active char(1))
+partitioned by (country STRING)
+row format delimited
+fields terminated by ','
+stored as textfile;
+
+-- Load data
+INSERT OVERWRITE TABLE airlines_by_country PARTITION(country) select airline_id, airline_name, active , country from airlines DISTRIBUTE By country;
+
+-- Find the list of Active Airlines in United state
+
